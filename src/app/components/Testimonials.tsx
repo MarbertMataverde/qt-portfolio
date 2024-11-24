@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from 'framer-motion';
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -21,7 +25,7 @@ const Testimonials = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-medium text-[#2D3748] sm:text-4xl">
             What Our Clients Say
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
@@ -33,11 +37,11 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="relative bg-gray-50 p-8 rounded-lg hover:shadow-md transition-shadow duration-300"
             >
               <div className="relative">
                 <svg
-                  className="h-12 w-12 text-gray-300 absolute top-0 left-0 transform -translate-x-6 -translate-y-8"
+                  className="h-12 w-12 text-[#FF8873] absolute top-0 left-0 transform -translate-x-6 -translate-y-8 opacity-20"
                   fill="currentColor"
                   viewBox="0 0 32 32"
                 >
@@ -46,9 +50,10 @@ const Testimonials = () => {
                 <p className="relative text-lg text-gray-600">{testimonial.content}</p>
               </div>
               <div className="mt-8">
-                <div className="font-medium text-gray-900">{testimonial.author}</div>
-                <div className="text-gray-500">{testimonial.role}</div>
+                <div className="font-medium text-[#2D3748]">{testimonial.author}</div>
+                <div className="text-[#FF8873]">{testimonial.role}</div>
               </div>
+              <div className="absolute inset-0 border-2 border-transparent hover:border-[#FF8873] rounded-lg transition-colors duration-300" />
             </div>
           ))}
         </div>
